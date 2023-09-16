@@ -1,8 +1,9 @@
-#include <logger.hpp>
+#include "print.hpp"
 
 int main(int argc, char const *argv[]) {
-  int num = 1;
-  LOG_P(num);
-  generic_log(LogLevel::Info, "{}", "hello");
+  std::variant<double, std::string> var = "114.514";
+  play::oprintln(std::cout, var);
+  var = 114.514;
+  play::oprintln(std::cout, var);
   return 0;
 }
